@@ -5,13 +5,18 @@
   <meta charset="utf-8">
   <title>logo</title>
 
+  <!-- scroll animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/styles.css">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <!-- cursor css -->
   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
-  <!-- scroll animation css -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -48,7 +53,11 @@
   </div>
 
   <!-- container-main must be hidden -->
+
+
+
   <div class="container-main hidden">
+
     <nav class="sidebar">
       <div class="circle-menu">
         <div class="line line-1"></div>
@@ -62,7 +71,6 @@
             <li id="nav-work"><a href="#skills">Skills</a></li>
             <li id="nav-work"><a href="#work">Work</a></li>
             <li id="nav-cta"><a href="#cta">Contact</a></li>
-            <!-- <li id="nav-resume"><a href="#about">Resume</a></li> -->
           </ul>
         </div>
 
@@ -76,35 +84,47 @@
       </div>
     </nav>
 
-    <div class="title" data-aos="fade-down" data-aos-duration="2000">
-      <h1>Graduate
-        <span class="text-outline">Software </span>
-        Engineer</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="title col-lg-6 col-sm-6">
+          <h1>Graduate
+            <span class="text-outline">Software </span>
+            Engineer</h1>
+        </div>
+
+        <div class="location col-lg-6 col-sm-6">
+          <img src="images/london2.png" alt="london" width="200px" height="200px">
+          <!-- Icons made by <a href="https://www.flaticon.com/authors/xnimrodx" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+          <img src="images/min.png" alt="" id="min">
+          <h3>London based</h3>
+
+        </div>
+
+      </div>
     </div>
 
-    <div class="location">
-      <img src="images/london2.png" alt="london" width="200px" height="200px">
-      <!-- Icons made by <a href="https://www.flaticon.com/authors/xnimrodx" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-      <img src="images/min.png" alt="" id="min">
-      <h3>London based</h3>
 
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-12 personal-statement">
+          <p>I recently finished my studies in Computer Science at the University
+            of Hertfordshire, specialising in Software Engineering and on track to
+            achieve a 2:1 honours degree. I have experience in programming languages
+            such as Java, Python, C/C++ and Swift, which were taught during my
+            university’s course through the completion of a range of projects.
+            Alongside my studies I have also developed a particular interest in
+            mobile and web development which drove me to expand my knowledge facing
+            facing new challenges on my spare time. This allowed me to gain new skills
+            in JavaScript and React framework and improve my knowledge in Swift and XCode. </p>
+        </div>
+      </div>
     </div>
 
-    <div class="personal-statement" data-aos="fade-up" data-aos-duration="2000">
-      <p>I recently finished my studies in Computer Science at the University
-        of Hertfordshire, specialising in Software Engineering and on track to
-        achieve a 2:1 honours degree. I have experience in programming languages
-        such as Java, Python, C/C++ and Swift, which were taught during my
-        university’s course through the completion of a range of projects.
-        Alongside my studies I have also developed a particular interest in
-        mobile and web development which drove me to expand my knowledge facing
-        facing new challenges on my spare time. This allowed me to gain new skills
-        in JavaScript and React framework and improve my knowledge in Swift and XCode. </p>
-    </div>
   </div>
 
-  <div class="container-education" id="education">
-    <div class="education-display" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container container-education hidden" id="education">
+    <div data-aos="fade-up" class="education-display">
       <h2>Education</h2>
 
       <h3>University of Hertfordshire</h3>
@@ -125,13 +145,11 @@
         <h4>78%</h4>
         <h4>2010 – 2015</h4>
       </div>
-
-
     </div>
   </div>
 
-  <div class="container-skills" id="skills">
-    <div class="skills-display" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container container-skills hidden" id="skills">
+    <div class="skills-display">
       <h2>Skills</h2>
       <div class="skills-lvl-display">
         <div class="skill-level">
@@ -156,59 +174,76 @@
         </div>
         <div class="skill-level">
           <h5>Web dev</h5>
-          <div id="java-lvl"></div>
+          <div id="web-lvl"></div>
         </div>
       </div>
-      <h5>Reflecting academic results*</h5>
+      <h5 id="results">Reflecting academic results*</h5>
     </div>
 
   </div>
 
-  <div class="container-work" id="work">
-    <div class="work-display" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container-work hidden" id="work">
+    <div class="work-display">
       <h2>Relevant work</h2>
 
-      <div class="work-details">
-        <h4>University final project / dissertation</h4>
-        <p>Researched, Planned and implemented a prototype iOS application in
-          XCode and Swift. It was developed integrating Google’s Firestore NoSQL
-          database to store any user generated data and also FSCalendar through
-          CocoaPods. The end goal of the project was to create a to-do list
-          application synched across all the users’ devices where tasks are
-          assigned to users with a set deadline and they are able to report
-          the progress of it. The second prototype of the application is
-          currently in the planning stage and aims to integrate a role-base
-          access control and further implement the calendar view for future
-          planning.</p>
+      <div class="row">
+
+        <div class=" col-lg-6 work-details">
+          <h4>University final project / dissertation</h4>
+          <p>Researched, Planned and implemented a prototype iOS application in
+            XCode and Swift. It was developed integrating Google’s Firestore NoSQL
+            database to store any user generated data and also FSCalendar through
+            CocoaPods. The end goal of the project was to create a to-do list
+            application synched across all the users’ devices where tasks are
+            assigned to users with a set deadline and they are able to report
+            the progress of it. The second prototype of the application is
+            currently in the planning stage and aims to integrate a role-base
+            access control and further implement the calendar view for future
+            planning.</p>
+        </div>
+
+        <div class="col-lg-6">
+
+        </div>
+
+        <div class="col-lg-5">
+
+        </div>
+        <div class="work-details2 col-lg-7">
+          <h4>Web development bootcamp</h4>
+          <p>I have undertaken a few web development guided projects as part of an
+            online course from Udemy. Here i was able to showcase my
+            self-taught skills in HTML, CSS while at the same time learning
+            Node.js, MongoDB and React.js</p>
+          <p>This is still a work in progress but you can check some of my work on my
+            <span><a href="https://github.com/EstebanGiacobbe">GitHub account</a></span></p>
+        </div>
       </div>
 
     </div>
 
-    <div class="work-details2" data-aos="fade-up" data-aos-duration="1000">
-      <h4>Web development bootcamp</h4>
-      <p>I have undertaken a few web development guided projects as part of an
-        online course from Udemy. Here i was able to showcase my
-        self-taught skills in HTML, CSS while at the same time learning
-        Node.js, MongoDB and React.js</p>
-      <p>This is still a work in progress but you can check some of my work on my
-        <span><a href="https://github.com/EstebanGiacobbe">GitHub account</a></span></p>
-    </div>
   </div>
 
-  <div class="container-cta" id="cta">
+  <div class="container-cta hidden" id="cta">
 
-    <div class="details-cta" >
+    <div class="details-cta">
       <h2>Contact me</h2>
 
       <div class="img-cta">
         <img src="images/main-photo.png" alt="myself" width=430px height=506px;>
         <div class="social-media">
-          <img src="images/github.png" alt="github" width="50px;" height="50px">
+          <a href="https://github.com/EstebanGiacobbe"> <img src="images/github.png" alt="github" width="50px;" height="50px">
+            <h6>GitHub</h6>
+          </a>
           <!-- Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-          <img src="images/cv.png" alt="github" width="50px;" height="50px">
+          <a href=""><img src="images/cv.png" alt="cv" width="50px;" height="50px">
+          <h6>Resume</h6></a>
+
           <!-- Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-          <img src="images/email.png" alt="github" width="50px;" height="50px">
-<!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+          <a href="mailto:estegiacobbe95@gmail.com"><img src="images/email.png" alt="email" width="50px;" height="50px">
+          <h6>Email me!</h6></a>
+
+          <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
 
         </div>
       </div>
@@ -216,15 +251,21 @@
     </div>
   </div>
 
+  <!-- scroll animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- cursor js -->
   <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
-  <!-- scroll animation js -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script src="index.js" charset="utf-8"></script>
 
 

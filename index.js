@@ -13,11 +13,13 @@ new kursor({
 $("span").click(function() {
 
   $('.container-intro').slideUp(1650, function() {
-    $(this).remove();
+    // $(this).remove();
+    $('container-intro').addClass('hidden');
   });
   $('.container-intro').addClass("animate__backOutUp");
-  $('.container-main').removeClass("hidden").addClass("fade-animation");
-  $('.title').addClass("fade-animation");
+  // $('container-intro').remove();
+  $('.hidden').removeClass("hidden");
+  // $('.title').addClass("fade-animation");
 
 });
 
